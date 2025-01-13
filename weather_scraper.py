@@ -3,13 +3,23 @@ import argparse
 import sys
 from bs4 import BeautifulSoup
 
+
+
+
+
+
 #   Weather Scraper for Weather.gov
 #                V 1.0
 #           by Ethan Wilson
 
 # usage:    python weather_scraper.py 32603 --unit C
 
-# output formatting to look nice
+
+
+
+
+
+
 
 def get_weather_data(location, unit):
     url = "https://forecast.weather.gov/zipcity.php"
@@ -22,10 +32,8 @@ def get_weather_data(location, unit):
     soup = BeautifulSoup(response.text, 'html.parser')
     return soup
 
-
-
+# output formatting to look nice
 line = "*" + " " * 58 + "*"
-
 print("*" * 60)
 print(line)
 print("*{:^58}*".format('CLI Client for Weather Scraper'))  # centered title
@@ -66,8 +74,6 @@ print("*{:^58}*".format("Fetching weather for: " + str(location)))  # centered t
 print("*{:^58}*".format("Temperature unit: " + str(unit)))
 print(line)
 print("*" * 60)
-
-
 
 
 try:
